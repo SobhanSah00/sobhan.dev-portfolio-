@@ -1,0 +1,21 @@
+
+export default function Home() {
+  return (
+    <>
+      <div className=" text-white min-h-screen flex items-center justify-center">
+        <div className="max-w-4xl w-full px-8">
+          <div>
+            <h1 className="text-4xl font-bold mb-2">Hi, I'm Sobhan</h1>
+            <p className="text-gray-400 text-lg mb-4">20, Odisha | Full Stack Engineer</p>
+            <p className="text-gray-300 max-w-2xl leading-relaxed">
+              I'm a Full Stack Developer with a strong focus on backend engineering and building
+              scalable systems. Alongside backend expertise, I also design and develop modern
+              GenAI-powered products, turning complex technologies into intuitive and
+              user-friendly applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
