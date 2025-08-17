@@ -42,19 +42,19 @@ const buttonsJson: ButtonInfo[] = [
     },
 ];
 
-export default function Buttons() {
+export function Buttons() {
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-2 sm:gap-3">
       {buttonsJson.map((btn) => (
         <Button
           asChild
           key={btn.id}
           variant="outline"
-          className="flex items-center gap-2"
+          className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2"
         >
           <a href={btn.link} target="_blank" rel="noopener noreferrer">
             {btn.icon}
-            <span>{btn.label}</span>
+            <span className="hidden xs:inline sm:inline">{btn.label}</span>
           </a>
         </Button>
       ))}
