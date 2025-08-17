@@ -1,7 +1,11 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export function GridBackgroundDemo({ children }: any) {
+interface childrenType {
+  children : React.ReactNode | string | number
+}
+
+export function GridBackgroundDemo({ children }: childrenType) {
   return (
     <div className="relative flex min-h-screen w-full bg-white dark:bg-neutral-950">
       <div

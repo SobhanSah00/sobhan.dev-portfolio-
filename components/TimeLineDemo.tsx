@@ -6,7 +6,32 @@ import { Modal, ModalBody, ModalContent, ModalTrigger } from "@/components/ui/an
 import { Github, ExternalLink } from "lucide-react"
 
 // Project data for cards
-const experienceSection = [
+
+interface experienceSectionInterface {
+  id: number,
+  title: string,
+  company: string,
+  status: string,
+  description: string,
+  fullDescription: string,
+  techStack: string[],
+  achievements: string[]
+  icon: string
+}
+
+interface ProjectsSectionInterface {
+  id: number,
+  title: string,
+  description: string,
+  fullDescription: string,
+  techStack: string[],
+  GitHubLink: string,
+  liveLink: string,
+  achievements: string[]
+  icon: string,
+  category: string
+}
+const experienceSection: experienceSectionInterface[] = [
   {
     id: 1,
     title: "Backend Engineer",
@@ -40,7 +65,7 @@ const experienceSection = [
   }
 ];
 
-const ProjectsSection = [
+const ProjectsSection: ProjectsSectionInterface[] = [
   {
     id: 1,
     title: "LearnSphere",
@@ -93,7 +118,7 @@ const ProjectsSection = [
   }
 ];
 
-function ExperianceCard({ project }: any) {
+function ExperianceCard({ project }: {project : experienceSectionInterface}) {
   return (
     <Modal>
       <ModalTrigger className="w-full p-0 text-left bg-transparent hover:bg-transparent border-0 rounded-none">
@@ -111,7 +136,7 @@ function ExperianceCard({ project }: any) {
               </div>
               <p className="text-gray-400 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech: any, index: any) => (
+                {project.techStack.map((tech: string, index: number) => (
                   <span
                     key={index}
                     className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
@@ -144,7 +169,7 @@ function ExperianceCard({ project }: any) {
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white mb-3">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech: any, index: any) => (
+              {project.techStack.map((tech: string, index: number) => (
                 <span
                   key={index}
                   className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
@@ -158,7 +183,7 @@ function ExperianceCard({ project }: any) {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Key Achievements</h3>
             <ul className="space-y-2">
-              {project.achievements.map((achievement: any, index: any) => (
+              {project.achievements.map((achievement: string, index: number) => (
                 <li key={index} className="text-gray-300 flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
                   <span>{achievement}</span>
@@ -172,7 +197,7 @@ function ExperianceCard({ project }: any) {
   );
 }
 
-function ProjectCard({ project }: any) {
+function ProjectCard({ project }: {project : ProjectsSectionInterface}) {
   return (
     <Modal>
       <ModalTrigger className="w-full p-0 text-left bg-transparent hover:bg-transparent border-0 rounded-none">
@@ -229,7 +254,7 @@ function ProjectCard({ project }: any) {
 
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {project.techStack.map((tech: any, index: any) => (
+              {project.techStack.map((tech: string, index: number) => (
                 <span
                   key={index}
                   className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium group-hover:bg-blue-900 group-hover:text-blue-200 transition-colors"
@@ -291,7 +316,7 @@ function ProjectCard({ project }: any) {
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white mb-3">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
-              {project.techStack.map((tech: any, index: any) => (
+              {project.techStack.map((tech: string, index: number) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-gradient-to-r bg-gray-700 text-white rounded-lg text-sm font-medium"
@@ -306,7 +331,7 @@ function ProjectCard({ project }: any) {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Key Achievements</h3>
             <ul className="space-y-3">
-              {project.achievements.map((achievement: any, index: any) => (
+              {project.achievements.map((achievement: string, index: number) => (
                 <li key={index} className="text-gray-300 flex items-start gap-3">
                   <span className="text-green-400 text-lg mt-0.5">✓</span>
                   <span className="leading-relaxed">{achievement}</span>
@@ -320,7 +345,6 @@ function ProjectCard({ project }: any) {
   );
 }
 
-
 export function TimelineDemo() {
   const data = [
     {
@@ -328,7 +352,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Here's a timeline of my professional journey, showcasing my roles and contributions in full-stack development.
+            Here&apos;s a timeline of my professional journey, showcasing my roles and contributions in full-stack development.
           </p>
 
           {/* Experience Cards Section */}
