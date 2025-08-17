@@ -111,8 +111,7 @@ function ExperianceCard({ project }: any) {
               </div>
               <p className="text-gray-400 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2">
-                {/* @ts-expect-error */}
-                {project.techStack.map((tech, index) => (
+                {project.techStack.map((tech: any, index: any) => (
                   <span
                     key={index}
                     className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
@@ -145,8 +144,7 @@ function ExperianceCard({ project }: any) {
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white mb-3">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
-              {/* @ts-expect-error */}
-              {project.techStack.map((tech, index) => (
+              {project.techStack.map((tech: any, index: any) => (
                 <span
                   key={index}
                   className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm"
@@ -160,8 +158,7 @@ function ExperianceCard({ project }: any) {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Key Achievements</h3>
             <ul className="space-y-2">
-              {/* @ts-expect-error */}
-              {project.achievements.map((achievement, index) => (
+              {project.achievements.map((achievement: any, index: any) => (
                 <li key={index} className="text-gray-300 flex items-start gap-2">
                   <span className="text-blue-400 mt-1">•</span>
                   <span>{achievement}</span>
@@ -232,8 +229,7 @@ function ProjectCard({ project }: any) {
 
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {/* @ts-expect-error */}
-              {project.techStack.map((tech, index) => (
+              {project.techStack.map((tech: any, index: any) => (
                 <span
                   key={index}
                   className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium group-hover:bg-blue-900 group-hover:text-blue-200 transition-colors"
@@ -295,8 +291,7 @@ function ProjectCard({ project }: any) {
           <div className="mb-6">
             <h3 className="text-lg font-semibold text-white mb-3">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
-              {/* @ts-expect-error */}
-              {project.techStack.map((tech, index) => (
+              {project.techStack.map((tech: any, index: any) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-gradient-to-r bg-gray-700 text-white rounded-lg text-sm font-medium"
@@ -311,8 +306,7 @@ function ProjectCard({ project }: any) {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Key Achievements</h3>
             <ul className="space-y-3">
-              {/* @ts-expect-error */}
-              {project.achievements.map((achievement, index) => (
+              {project.achievements.map((achievement: any, index: any) => (
                 <li key={index} className="text-gray-300 flex items-start gap-3">
                   <span className="text-green-400 text-lg mt-0.5">✓</span>
                   <span className="leading-relaxed">{achievement}</span>
