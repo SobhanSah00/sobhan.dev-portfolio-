@@ -19,7 +19,7 @@ const buttonsJson: ButtonInfo[] = [
     {
         id: 2,
         label: "LinkedIn",
-        link: "https://www.linkedin.com/in/SOBHAN-SAH00/",
+        link: "https://www.linkedin.com/in/sobhansahoo/",
         icon: <Linkedin className="w-5 h-5" />,
     },
     {
@@ -37,7 +37,7 @@ const buttonsJson: ButtonInfo[] = [
     {
         id: 5,
         label: "Resume",
-        link: "https://drive.google.com/file/d/1JByAw5IK0hFf0NIROU8v7Bbvlas46FhV/view?usp=sharing",
+        link: "https://drive.google.com/file/d/189KHACHGWD0nf9k-SOeYyCFOfKVjIi7d/view",
         icon: <FileText className="w-5 h-5" />,
     },
 ];

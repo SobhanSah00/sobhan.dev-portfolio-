@@ -67,53 +67,57 @@ const experienceSection: experienceSectionInterface[] = [
 const ProjectsSection: ProjectsSectionInterface[] = [
   {
     id: 1,
-    title: "LearnSphere",
-    description: "Migrating aia insurance internal website",
-    fullDescription: "I'm a Backend Developer crafting cutting-edge dApps and DeFi solutions. From writing secure smart contracts to building intuitive Web3 interfaces, I turn complex blockchain concepts into user-friendly experiences.",
-    techStack: ['Nest.js', 'Next.js', 'MS SQL'],
-    GitHubLink: "https://github.com/username/learnsphere",
-    liveLink: "https://learnsphere.demo.com",
+    title: "LSP",
+    description: "Backend-as-a-Service platform offering 50+ ready-to-use APIs",
+    fullDescription:
+      "A one-stop Backend-as-a-Service platform offering 50+ ready-to-use APIs for frontend developers. It includes public APIs for social media, authentication, chat, and AI integrations, designed with scalability and modular architecture in mind.",
+    techStack: ["Node.js", "Express.js", "MongoDB", "Next.js", "TypeScript"],
+    GitHubLink: "https://github.com/SobhanSah00/lsp",
+    liveLink: "https://lsp-learnspherehome.vercel.app/",
     achievements: [
-      "Built and maintained backend services/APIs for Internal website",
-      "Created 25+ production grade API's for now",
-      "Creating Unit Test case's for my endpoints",
+      "Built a public API library covering social, real-time chat, auth, and AI integrations.",
+      "Designed with modular monorepo architecture for scalability.",
+      "Integrated multi-LLM APIs and text-to-image generation.",
+      "Developed a Next.js dashboard for browsing and testing APIs."
     ],
-    icon: "🎓",
+    icon: "🧠",
     category: "Backend Development"
   },
   {
     id: 2,
-    title: "CryptoTracker Pro",
-    description: "Real-time cryptocurrency tracking and portfolio management",
-    fullDescription: "A comprehensive cryptocurrency tracking application with real-time price updates, portfolio management, and advanced analytics. Built with modern web technologies for optimal performance.",
-    techStack: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
-    GitHubLink: "https://github.com/username/cryptotracker",
-    liveLink: "https://cryptotracker.demo.com",
+    title: "Drawisly",
+    description: "Real-time collaborative whiteboard for teams",
+    fullDescription:
+      "A real-time collaborative whiteboard app built with Next.js and TypeScript that allows multiple users to draw, annotate, and chat in shared rooms. Designed for high concurrency and efficient data sync using WebSockets and PostgreSQL.",
+    techStack: ["Next.js", "TypeScript", "Express.js", "PostgreSQL", "Prisma", "WebSocket"],
+    GitHubLink: "https://github.com/SobhanSah00/Drawisly",
+    liveLink: "",
     achievements: [
-      "Integrated 10+ cryptocurrency exchanges APIs",
-      "Real-time price updates with WebSocket connections",
-      "Advanced charting with technical indicators",
-      "Portfolio tracking with profit/loss analytics"
+      "Implemented live drawing, chat, and presence with WebSocket communication.",
+      "Managed persistent sessions and room states with Prisma and PostgreSQL.",
+      "Used Turborepo for modular monorepo structure across frontend and backend.",
+      "Enabled real-time collaboration with efficient sync handling."
     ],
-    icon: "₿",
-    category: "Full Stack"
+    icon: "🎨",
+    category: "Full Stack Development"
   },
   {
     id: 3,
-    title: "TaskFlow Dashboard",
-    description: "Project management and team collaboration platform",
-    fullDescription: "A modern project management solution designed for agile teams. Features include task tracking, team collaboration, time management, and comprehensive project analytics.",
-    techStack: ['Vue.js', 'Express.js', 'PostgreSQL', 'Redis'],
-    GitHubLink: "https://github.com/username/taskflow",
-    liveLink: "https://taskflow.demo.com",
+    title: "Auth-Cli-Tool",
+    description: "Plug-and-play authentication CLI generator",
+    fullDescription:
+      "A developer-friendly CLI tool that scaffolds a complete Express.js authentication boilerplate in seconds. Built to reduce setup time and streamline authentication setup across projects.",
+    techStack: ["Node.js", "Express.js", "Commander", "Inquirer", "TypeScript"],
+    GitHubLink: "https://github.com/SobhanSah00/auth-cli-tool",
+    liveLink: "https://www.npmjs.com/package/auth-cli-tool",
     achievements: [
-      "Built drag-and-drop task management interface",
-      "Implemented real-time collaboration features",
-      "Created comprehensive reporting dashboard",
-      "Optimized database queries for 50% faster load times"
+      "Scaffolds full Express.js auth boilerplate instantly with npx command.",
+      "Supports MongoDB/Mongoose and PostgreSQL/Prisma options.",
+      "Configurable JWT or Cookie-based authentication.",
+      "Achieved 500+ downloads on launch day, improving developer setup time by 95%."
     ],
-    icon: "📊",
-    category: "Frontend Development"
+    icon: "⚙️",
+    category: "Developer Tools"
   }
 ];
 
@@ -368,8 +372,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p className="mb-6 sm:mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+            What ever i Want that i made and that are my projects .
           </p>
 
           <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
