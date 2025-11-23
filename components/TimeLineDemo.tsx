@@ -36,13 +36,16 @@ const experienceSection: experienceSectionInterface[] = [
     title: "Backend Engineer",
     company: "Viden Edutech",
     status: "Current",
-    description: "Migrating aia insurance internal website",
-    fullDescription: "I'm a Backend Developer crafting cutting-edge dApps and DeFi solutions. From writing secure smart contracts to building intuitive Web3 interfaces, I turn complex blockchain concepts into user-friendly experiences.",
+    description: "Migrating AIA insurance internal codebase and website st.",
+    fullDescription: "As a Backend Engineer, I work for AIA Insurance Company on modernizing a large-scale ASP.NET application into a scalable architecture using NestJS and Next.js. I lead for my module backend development, redesign service layers with TypeScript and TypeORM, integrate MS SQL, and ensure smooth collaboration across frontend and QA teams. My focus is on building reliable, scalable APIs and driving overall backend quality.",
     techStack: ['Nest js', 'Next js', 'Ms sql'],
     achievements: [
-      "Built and maintained backend services/APIs for Internal website",
-      "Created 25 + production grade api's for now",
-      "Creting Unit Test case's for my endpoints",
+      "Migrated major ASP.NET modules to a modern NestJS-based architecture, improving scalability and developer productivity.",
+      "Rebuilt backend modules using TypeScript and TypeORM with optimized MS SQL queries and schema design.",
+      "Led backend development for my module, overseeing task planning, code reviews, and architecture decisions.",
+      "Collaborated closely with frontend and QA teams to ship stable, production-ready features.",
+      "Delivered scalable, well-structured, and maintainable backend services used across the enterprise system."
+
     ],
     icon: "💼"
   },
@@ -118,10 +121,102 @@ const ProjectsSection: ProjectsSectionInterface[] = [
     ],
     icon: "⚙️",
     category: "Developer Tools"
-  }
+  },
+  {
+    id: 4,
+    title: "PROX-G",
+    description: "AI-powered image generation and embedding platform",
+    fullDescription:
+      "PROX-G is an advanced AI image generation platform that converts user prompts into high-quality images and vector embeddings. It features Google OAuth authentication, payment integration, free credit limits, and a scalable backend designed for commercial-grade performance.",
+    techStack: [
+      "Next.js",
+      "JavaScript",
+      "mongoose",
+      "mongodb",
+      "Stripe/Razorpay",
+      "Google OAuth",
+      "FLUX - MODEL",
+      "Gemini Embedings",
+      "Nebuis"
+    ],
+    GitHubLink: "https://github.com/SobhanSah00/ai_image_generator",
+    liveLink: "https://proxg.vercel.app/",
+    achievements: [
+      "Implemented high-quality AI image generation from natural prompts.",
+      "Added automatic vector embedding generation for semantic search and personalization.",
+      "Integrated Google OAuth for seamless onboarding.",
+      "Added payment system supporting credits and premium usage.",
+      "Provided 5 free image generation credits for new users.",
+      "Designed scalable APIs capable of handling high-volume prompt traffic.",
+      "Add Guard Rails for prompt safety and quality control from both side of user and AI.",
+    ],
+    icon: "🎨",
+    category: "AI / Generative Tools"
+  },
+  {
+    id: 5,
+    title: "NewsSoup",
+    description: "Real-time AI-summarized tech and AI news delivery system",
+    fullDescription:
+      "NewsSoup automatically fetches the latest technology and AI news from the MediaStack API and generates concise summaries using Gemini. It runs on scheduled cron jobs and delivers daily or hourly updates directly through email, WhatsApp, and SMS using Twilio and Resend. Built to keep developers and AI enthusiasts instantly informed with minimal effort.",
+    techStack: [
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "MediaStack API",
+      "Gemini API",
+      "Cron Jobs",
+      "Twilio",
+      "Resend",
+    ],
+    GitHubLink: "https://github.com/SobhanSah00/news_soup",
+    liveLink: "",
+    achievements: [
+      "Automated news scraping and summarization pipeline using MediaStack + Gemini.",
+      "Delivered AI-generated summaries via email, WhatsApp, and SMS.",
+      "Implemented cron jobs for scheduled daily/hourly news delivery.",
+      "Reduced information overload by summarizing large articles into 3-5 bullet insights.",
+      "Built a multi-channel delivery system using Twilio for SMS/WhatsApp and Resend for email.",
+      "Created a developer-friendly dashboard to manage delivery frequency and sources."
+    ],
+    icon: "📰",
+    category: "Automation / AI Tools"
+  },
+  {
+    id: 6,
+    title: "AI Voice Conversation Agent",
+    description: "Real-time voice-based conversational AI with STT, LLM reasoning, and TTS.",
+    fullDescription:
+      "A real-time, voice-driven conversational AI system engineered to simulate natural two-way conversation. The backend processes live audio input, transcribes it using Whisper, generates contextual AI responses using GPT, converts them back to speech with a TTS engine, and streams the audio output instantly over WebSockets. Designed to feel like interacting with an intelligent AI agent over a phone call.",
+    techStack: [
+      "Node.js",
+      "Express.js",
+      "WebSockets",
+      "OpenAI Whisper",
+      "OpenAI GPT Models",
+      "TTS-1",
+      "MongoDB",
+      "Mongoose",
+      "Multer"
+    ],
+    GitHubLink: "https://github.com/SobhanSah00/voice-based-AI-booking-system",
+    liveLink: "",
+    achievements: [
+      "Implemented full voice interaction pipeline: STT → LLM → TTS.",
+      "Achieved real-time bi-directional communication using WebSockets.",
+      "Designed modular controllers for STT, GPT logic, TTS, and conversation management.",
+      "Built persistent conversation memory using MongoDB to maintain long multi-turn context.",
+      "Integrated Whisper for high-accuracy transcription and TTS-1 for natural speech output.",
+      "Handled audio uploads efficiently with Multer and streamed responses back to the client.",
+      "Created production-ready backend architecture with clean separation of controllers, routes, models, and utils."
+    ],
+    icon: "🔊",
+    category: "AI / Voice Interaction"
+  },
+  
 ];
 
-function ExperianceCard({ project }: {project : experienceSectionInterface}) {
+function ExperianceCard({ project }: { project: experienceSectionInterface }) {
   return (
     <Modal>
       <ModalTrigger className="w-full p-0 text-left bg-transparent hover:bg-transparent border-0 rounded-none">
@@ -200,7 +295,7 @@ function ExperianceCard({ project }: {project : experienceSectionInterface}) {
   );
 }
 
-function ProjectCard({ project }: {project : ProjectsSectionInterface}) {
+function ProjectCard({ project }: { project: ProjectsSectionInterface }) {
   return (
     <Modal>
       <ModalTrigger className="w-full p-0 text-left bg-transparent hover:bg-transparent border-0 rounded-none">
